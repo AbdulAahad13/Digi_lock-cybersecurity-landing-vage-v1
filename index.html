@@ -27,22 +27,28 @@
   </head>
   <body>
     <div class="banner">
-      <div class="navbar">
-        <div class="logo">
-          <i class="fa fa-shield" aria-hidden="true"></i>
-          <h3>
-            <a href="#index.html" class="logo-name">DIGI-LOCK</a>
-          </h3>
-        </div>
-
-        <ul>
-          <li><a href="">Products & Services</a></li>
-          <li><a href="">Internet Security Centre</a></li>
-          <li><a href="">Support</a></li>
-          <li><a href="">Free trials</a></li>
-          <li><a href="">My Account</a></li>
-        </ul>
+      <div class="logo">
+        <i class="fa fa-shield"></i>
+        <h3>
+          <a href="#index.html" class="logo-name">DIGI-LOCK</a>
+        </h3>
       </div>
+      <nav>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times-circle-o" onclick="hideMenu()"></i>
+
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#"> Products & Services </a></li>
+            <li><a href="#">Internet Security Centre</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#"> Free trials</a></li>
+            <li><a href="#">My Account</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
       <div class="content">
         <div class="title">
           Secure Your
@@ -57,5 +63,15 @@
         <button>Register NOW</button>
       </div>
     </div>
+    <!-- ------javascript------toggle menu -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
   </body>
 </html>

@@ -75,6 +75,12 @@
   line-height: 100px;
   font-weight: bold;
   font-family: sans-serif;
+  height: 100px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 .content p {
   margin: 20px auto;
@@ -85,14 +91,46 @@
 button {
   padding: 15px 25px;
   margin: 20px;
-  letter-spacing: 1px;
   font-size: 20px;
+  letter-spacing: 2px;
+  border: 1px solid lightblue;
   color: white;
   cursor: pointer;
-  border: 1px solid turquoise;
-
-  font-family: "Roboto Mono", monospace;
+  background: linear-gradient(to right, transparent 50%, lightblue 50%);
   background-size: 200%;
   background-position: left;
-  background: linear-gradient(to right, transparent 70%, #ffc107 50%);
+  transition: 0.5s;
+}
+button:hover {
+  background-position: right;
+  color: black;
+}
+.slider {
+  color: turquoise;
+  margin-left: 12px;
+  box-sizing: border-box;
+  animation: slider 6s linear infinite;
+}
+@keyframes slider {
+  0% {
+    margin-top: -400px;
+  }
+  5% {
+    margin-top: -200px;
+  }
+  30% {
+    margin-top: -200px;
+  }
+  35% {
+    margin-top: 0px;
+  }
+  65% {
+    margin-top: 0px;
+  }
+  70% {
+    margin-top: 200px;
+  }
+  100% {
+    margin-top: 200px;
+  }
 }
